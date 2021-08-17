@@ -4,9 +4,20 @@
   Author: Eric Whitcomb
   Author URI: http://www.ericwhitcomb.com
   Description: Theme designed for gym
-  Version: 1.0
+  Version: 1.0.0
   License: GNU General Public License v2 or later
   License URI: http://www.gnu.org/licenses/gpl-2.0.html
   Tags: CSS Grid, Flexbox ready, mobile first, gym theme
   Text Domain: wp_gym
 */
+
+:root {
+  /** Fonts **/
+  --mainFont: "Staatliches", cursive;
+  --textFont: "Open Sans", sans-serif;
+  --secondaryFont: "Raleway", sans-serif;
+}
+
+body {
+  font-family: var(--textFont);
+}
