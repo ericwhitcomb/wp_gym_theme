@@ -17,7 +17,14 @@
           </a>
         </div><!--.logo-->
 
-        <!-- TODO: add menu -->
+        <?php 
+          $args = array(
+            'theme_location' => 'main-menu',
+            'container' => 'nav',
+            'container_class' => 'main-menu'
+          );
+          wp_nav_menu($args);
+        ?>
     </div><!--.navigation-bar-->
   </div><!--.container-->
 </header>
