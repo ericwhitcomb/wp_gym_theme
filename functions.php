@@ -30,12 +30,41 @@ function wp_gym_theme_scripts() {
     null
   );
 
+  // SlickNav CSS
+  wp_enqueue_style(
+    'slicknav_css',
+    get_template_directory_uri() . "/css/slicknav.min.css",
+    array(),
+    '1.0.10'
+  );
+
   // Main Stylesheet
   wp_enqueue_style(
     'theme_style',
     get_stylesheet_uri(),
     array('normalize_css', 'google_fonts'),
     '1.0.0'
+  );
+
+  // JQuery
+  wp_enqueue_script('jquery');
+
+  // SlickNav JS
+  wp_enqueue_script(
+    'slicknav_js',
+    get_template_directory_uri() . "/js/jquery.slicknav.min.js",
+    array('jquery'),
+    '1.0.10',
+    True // loads script in the footer
+  );
+
+  // Main Script JS
+  wp_enqueue_script(
+    'theme_script',
+    get_template_directory_uri() . "/js/scripts.js",
+    array('jquery'),
+    '1.0.0',
+    True // loads script in the footer
   );
 
 }

@@ -124,6 +124,25 @@ h3 {
   border-bottom: 3px solid var(--primary);
 }
 
+.slicknav_menu {
+  background-color: var(--darkGray);
+}
+
+.slicknav_btn {
+  background-color: var(--primary);
+}
+
+.slicknav_nav a {
+  font-size: 2.4rem;
+  text-align: center;
+  font-family: var(--mainFont);
+}
+
+.slicknav_nav a:hover {
+  background: transparent;
+  color: var(--primary);
+}
+
 @media (min-width: 768px) {
   .main-menu {
     display: flex;
@@ -140,6 +159,10 @@ h3 {
 
   .main-menu li:last-of-type {
     margin-right: 0;
+  }
+
+  .slicknav_menu {
+    display: none;
   }
 }
 
