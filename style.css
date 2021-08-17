@@ -11,13 +11,82 @@
   Text Domain: wp_gym
 */
 
+/** css variables **/
 :root {
   /** Fonts **/
   --mainFont: "Staatliches", cursive;
   --textFont: "Open Sans", sans-serif;
   --secondaryFont: "Raleway", sans-serif;
+
+  /** Colors **/
+  --primary: #ff5b00;
+  --darkGray: #2f2e2e;
+  --lightGray: #ebebeb;
+
+  --white: #ffffff;
+  --black: #000000;
 }
 
-body {
-  font-family: var(--textFont);
+/** Pulled from https://www.paulirish.com/2012/box-sizing-border-box-ftw/ **/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
 }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/** globals **/
+body {
+  font-family: var(--secondaryFont);
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 120rem; /* 1200px */
+  width: 95%;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto; /* keeps proportions */
+}
+
+/** headings **/
+h1,
+h2,
+h3 {
+  font-family: var(--mainFont);
+  margin: 0.5rem 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+  color: var(--primary);
+}
+
+h3 {
+  font-size: 3.6rem;
+}
+
+/** utilities **/
