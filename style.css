@@ -25,6 +25,9 @@
 
   --white: #ffffff;
   --black: #000000;
+
+  /** Screen Sizes **/
+  --desktop: 768px;
 }
 
 /** Pulled from https://www.paulirish.com/2012/box-sizing-border-box-ftw/ **/
@@ -225,9 +228,24 @@ h3 {
 }
 
 /** page template **/
-.page.no-sidebars {
+.page.no-sidebar {
   max-width: 80rem;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .page.with-sidebar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .with-sidebar .page-content {
+    flex: 0 0 calc(60% - 2rem);
+  }
+
+  .with-sidebar .sidebar {
+    flex: 0 0 calc(40% - 2rem);
+  }
 }
 
 .page h1 {
