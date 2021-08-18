@@ -90,6 +90,17 @@ h3 {
 }
 
 /** utilities **/
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.section {
+  padding: 5rem 0;
+}
 
 /** header **/
 .site-header {
@@ -211,4 +222,18 @@ h3 {
   .copyright {
     flex: 0 0 auto;
   }
+}
+
+/** page template **/
+.page.no-sidebars {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.page h1 {
+  margin-bottom: 4rem;
+}
+
+.page .featured-image {
+  margin-bottom: 3rem;
 }
