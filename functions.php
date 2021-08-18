@@ -71,4 +71,21 @@ function wp_gym_theme_scripts() {
 
 add_action('wp_enqueue_scripts', 'wp_gym_theme_scripts');
 
+// Enable Feature Images and other stuff
+function wp_gym_theme_setup() {
+
+  // Register new image sizes
+  add_image_size('square', 350, 350, true);
+  add_image_size('portrait', 350, 724, true);
+  add_image_size('box', 400, 375, true); 
+  add_image_size('medium_size', 700, 400, true);
+  add_image_size('blog', 966, 644, true);
+
+  // Add feature image
+  add_theme_support('post-thumbnails');
+
+}
+
+add_action('after_setup_theme', 'wp_gym_theme_setup');
+
 ?>
