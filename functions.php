@@ -88,4 +88,18 @@ function wp_gym_theme_setup() {
 
 add_action('after_setup_theme', 'wp_gym_theme_setup');
 
+// Create Widget Zone
+function wp_gym_theme_widgets() {
+  register_sidebar(array(
+    'name' => 'Sidebar',
+    'id' => 'sidebar',
+    'before_widget' => '<ul class="widget">',
+    'after_widget' => '</ul>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>'
+  ));
+}
+
+add_action('widgets_init', 'wp_gym_theme_widgets');
+
 ?>
