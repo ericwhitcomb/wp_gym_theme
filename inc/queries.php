@@ -22,11 +22,11 @@ function wp_gym_classes_list() { ?>
           </a>
           
           <?php 
+            $class_days = get_field('class_days');
             $start_time = get_field('start_time');
             $end_time = get_field('end_time');
           ?>
-          <p><?php echo get_field('class_days') . ' - ' . $start_time . ' to ' . $end_time;?></p>
-          <p><?php  ?></p>
+          <p><?php echo $class_days . ' - ' . $start_time . ' to ' . $end_time;?></p>
         </div>
       </li>
 
