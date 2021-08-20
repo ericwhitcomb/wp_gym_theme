@@ -20,12 +20,13 @@ function wp_gym_classes_list() { ?>
           <a href="<?php the_permalink(); ?>">
             <h3><?php the_title(); ?></h3>
           </a>
-          <p><?php the_field('class_days'); ?></p>
+          
           <?php 
             $start_time = get_field('start_time');
             $end_time = get_field('end_time');
           ?>
-          <p><?php echo $start_time . ' to ' . $end_time; ?></p>
+          <p><?php echo get_field('class_days') . ' - ' . $start_time . ' to ' . $end_time;?></p>
+          <p><?php  ?></p>
         </div>
       </li>
 
