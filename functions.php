@@ -98,7 +98,7 @@ function wp_gym_theme_widgets() {
     'id' => 'sidebar',
     'before_widget' => '<ul class="widget">',
     'after_widget' => '</ul>',
-    'before_title' => '<h3>',
+    'before_title' => '<h3 class="text-primary">',
     'after_title' => '</h3>'
   ));
 }

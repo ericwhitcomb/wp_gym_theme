@@ -73,7 +73,10 @@ img {
 /** headings **/
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--mainFont);
   margin: 0.5rem 0;
   line-height: 1.2;
@@ -90,6 +93,18 @@ h2 {
 
 h3 {
   font-size: 3.6rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+h5 {
+  font-size: 2.4rem;
+}
+
+h6 {
+  font-size: 2rem;
 }
 
 /** utilities **/
@@ -348,4 +363,41 @@ p.class-info {
   font-family: var(--secondaryFont);
   font-size: 2.2rem;
   text-align: center;
+}
+
+/** sidebar **/
+.sidebar a {
+  color: var(--black);
+}
+
+.sidebar .widget {
+  margin-bottom: 4rem;
+}
+
+.sidebar-class-list-header {
+  margin-bottom: 2rem;
+}
+
+.sidebar-class-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.sidebar-class-image {
+  flex: 0 0 30%;
+}
+
+.sidebar-class-content {
+  flex: 0 0 calc(70% - 2rem);
+}
+
+.sidebar-class-content h4 {
+  margin: 0;
+}
+
+.sidebar-class-content p {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
 }

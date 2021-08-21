@@ -3,13 +3,12 @@ function wp_gym_classes_list() { ?>
   <ul class="classes-list">
     <?php
       $args = array(
-        'post_type' => 'wp_gym_classes'
+        'post_type' => 'wp_gym_classes',
+        'order' => 'ASC'
       );
 
       // Use WP_Query and append the results into $classes
-      $classes = new WP_Query($args);
-      $classes->posts = array_reverse($classes->posts);
- 
+      $classes = new WP_Query($args); 
       while ($classes->have_posts()): $classes->the_post();
     ?>
 
