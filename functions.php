@@ -41,6 +41,16 @@ function wp_gym_theme_scripts() {
     '1.0.10'
   );
 
+  // Lightbox CSS (only load in gallery template)
+  if (basename(get_page_template()) === "gallery.php") {
+    wp_enqueue_style(
+      'lightbox2_css',
+      get_template_directory_uri() . "/css/lightbox.min.css",
+      array(),
+      '2.11.3'
+    );
+  }
+
   // Main Stylesheet
   wp_enqueue_style(
     'theme_style',
@@ -60,6 +70,17 @@ function wp_gym_theme_scripts() {
     '1.0.10',
     True // loads script in the footer
   );
+
+  // Lightbox2 JS (only load in gallery template)
+  if (basename(get_page_template()) === "gallery.php") {
+    wp_enqueue_script(
+      'lightbox2_script',
+      get_template_directory_uri() . "/js/lightbox.min.js",
+      array('jquery'),
+      '2.11.3',
+      True // loads script in the footer
+    );
+  }
 
   // Main Script JS
   wp_enqueue_script(
