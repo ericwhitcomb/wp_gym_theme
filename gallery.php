@@ -21,14 +21,15 @@
       <?php 
         $i = 0;
         foreach ($image_ids as $id):
-          $size = ($i === 3) || ($i === 6) ? 'portrait' : 'square';
+          $size = ($i === 3) || ($i === 5) ? 'portrait' : 'square';
           $imageThumb = wp_get_attachment_image_src($id, $size);
           $image = wp_get_attachment_image_src($id, 'large');
       ?>
-      
-        <a href="<?php echo $image[0]; ?>" data-lightbox="gallery">
-          <img src="<?php echo $imageThumb[0]; ?>" />
-        </a>
+        <li>
+          <a href="<?php echo $image[0]; ?>" data-lightbox="gallery">
+            <img src="<?php echo $imageThumb[0]; ?>" />
+          </a>
+        </li>
 
       <?php $i++; endforeach; ?>
     </ul>
