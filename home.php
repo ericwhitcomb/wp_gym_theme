@@ -24,7 +24,7 @@
             </span>
           </p>
 
-          <p class="date-published">
+          <p class="date-published meta">
             <span>Date: 
               <a href="">
                 <?php the_time(get_option('date_format')) ?>
