@@ -376,7 +376,8 @@ p.class-info {
   margin-bottom: 4rem;
 }
 
-.sidebar-class-list-header {
+.sidebar-class-list-header,
+.sidebar-blog-entries-header {
   margin-bottom: 2rem;
 }
 

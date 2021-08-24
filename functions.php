@@ -119,7 +119,7 @@ function wp_gym_theme_widgets() {
     'id' => 'sidebar',
     'before_widget' => '<ul class="widget">',
     'after_widget' => '</ul>',
-    'before_title' => '<h3 class="text-primary">',
+    'before_title' => '<h3 class="text-primary text-center sidebar-blog-entries-header">',
     'after_title' => '</h3>'
   ));
 }
