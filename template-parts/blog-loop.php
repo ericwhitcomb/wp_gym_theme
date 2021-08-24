@@ -25,8 +25,14 @@
         </p>
 
         <p class="date-published meta">
+          <?php 
+            $year = get_the_time( 'Y' );
+            $month = get_the_time( 'm' );
+            $day = get_the_time( 'd' );
+            $date_url = get_day_link($year, $month, $day);
+          ?>
           <span>Date: 
-            <a href="">
+            <a href="<?php echo esc_url($date_url); ?>">
               <?php the_time(get_option('date_format')) ?>
             </a>
           </span>
