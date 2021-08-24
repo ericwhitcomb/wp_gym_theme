@@ -112,6 +112,10 @@ h6 {
   text-align: center;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .text-primary {
   color: var(--primary);
 }
