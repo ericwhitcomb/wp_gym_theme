@@ -533,3 +533,7 @@ p.class-info {
   color: white !important;
   padding: 0.5rem;
 } */
+
+#map {
+  height: 300px;
+}
