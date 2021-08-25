@@ -1,6 +1,8 @@
 <?php while(have_posts()): the_post(); ?>
 
   <h1 class="text-center text-primary"><?php the_title(); ?></h1>
+
+  <?php echo get_field('location'); ?>
   
   <?php 
     // check if a thumbnail exists
