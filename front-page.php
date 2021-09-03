@@ -38,5 +38,21 @@
     </ul>
   </section>
 
+  <!-- Classes Section -->
+  <section class="classes-homepage">
+    <?php $classes_url = get_permalink(get_page_by_title('Classes')); ?>
+    <div class="container section">
+      <h2 class="text-center">Our Classes</h2>
+      
+      <?php wp_gym_classes_list(4); ?>
+      
+      <div class="button-container align-right">
+        <a class="button" href="<?php echo $classes_url; ?>">
+          View All Classes
+        </a>
+      </div>
+    </div>
+  </section>
+
   <?php endwhile; ?>
 <?php get_footer(); ?>

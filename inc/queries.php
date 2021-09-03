@@ -1,9 +1,10 @@
 <?php
-function wp_gym_classes_list() { ?>
+function wp_gym_classes_list($number_of_classes = -1) { ?>
   <ul class="classes-list">
     <?php
       $args = array(
         'post_type' => 'wp_gym_classes',
+        'posts_per_page' => $number_of_classes,
         'order' => 'ASC'
       );
 

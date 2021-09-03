@@ -124,6 +124,40 @@ h6 {
   padding: 5rem 0;
 }
 
+/** buttons **/
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-container.align-left {
+  justify-content: flex-start;
+}
+
+.button-container.align-right {
+  justify-content: flex-end;
+}
+
+.button {
+  display: block;
+  background-color: var(--primary);
+  flex: 1;
+  text-align: center;
+  color: var(--white);
+  border-radius: 0.5rem;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .button {
+    display: inline-block;
+    flex: 0 0 auto;
+  }
+}
+
 /** header **/
 .site-header {
   background-color: var(--darkGray);
