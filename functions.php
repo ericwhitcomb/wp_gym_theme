@@ -126,4 +126,30 @@ function wp_gym_theme_widgets() {
 
 add_action('widgets_init', 'wp_gym_theme_widgets');
 
+// Display hero image as background of header on the front page
+function wp_gym_hero_image() {
+  $front_page_id = get_option('page_on_front');
+  $image_data = get_field('hero_image', $front_page_id);
+  $image_url = $image_data['url'];
+
+  $featured_image_css = "
+    body.home .site-header {
+      background-image: linear-gradient(
+                          rgba(0, 0, 0, 0.75),
+                          rgba(0, 0, 0, 0.75)
+                        ), 
+                        url($image_url);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  ";
+
+  // Create false stylesheet
+  wp_register_style('custom', false);
+  wp_enqueue_style('custom');
+  wp_add_inline_style('custom', $featured_image_css);
+}
+
+add_action('init', 'wp_gym_hero_image');
+
 ?>
