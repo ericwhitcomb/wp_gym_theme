@@ -1,4 +1,5 @@
 <?php
+// classes list query
 function wp_gym_classes_list($number_of_classes = -1) { ?>
   <ul class="classes-list">
     <?php
@@ -30,6 +31,41 @@ function wp_gym_classes_list($number_of_classes = -1) { ?>
         </div>
       </li>
 
+    <?php endwhile; wp_reset_postdata(); ?>
+  </ul>
+<?php } ?>
+
+<?php
+// instructors list query
+function wp_gym_instructors_list($number_of_instructors = -1) { ?>
+  <ul class="instructors-list">
+    <?php 
+      $args = array(
+        'post_type' => 'wp_gym_instructors',
+        'posts_per_page' => $number_of_instructors,
+        'order' => 'ASC'
+      );
+
+      // Use WP_Query and append the results into $instructors
+      $instructors = new WP_Query($args);
+      while($instructors->have_posts()): $instructors->the_post();
+    ?>
+
+      <li class="instructor-item">
+        <?php the_post_thumbnail('medium_size'); ?>
+        
+        <div class="content text-center">
+          <h3><?php the_title(); ?></h3>
+          <?php the_content(); ?>
+
+          <div class="specialties">
+            <?php $specialties = get_field('specialties'); ?>
+            <?php foreach ($specialties as $specialty): ?>
+              <span class="tag"><?php echo $specialty; ?></span>
+            <?php endforeach; ?>
+          </div>
+        </div>
+      </li>
     <?php endwhile; wp_reset_postdata(); ?>
   </ul>
 <?php } ?>

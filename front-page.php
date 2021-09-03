@@ -39,18 +39,36 @@
   </section>
 
   <!-- Classes Section -->
-  <section class="classes-homepage">
-    <?php $classes_url = get_permalink(get_page_by_title('Classes')); ?>
+  <?php
+    $classes_title = get_field('classes_title');
+    $classes_button_label = get_field('classes_button_label');
+    $classes_url = get_permalink(get_page_by_title('Classes'));
+  ?>
+  <section class="classes">
     <div class="container section">
-      <h2 class="text-center">Our Classes</h2>
+      <h2 class="text-center"><?php echo $classes_title; ?></h2>
       
       <?php wp_gym_classes_list(4); ?>
       
       <div class="button-container align-right">
         <a class="button" href="<?php echo $classes_url; ?>">
-          View All Classes
+          <?php echo $classes_button_label; ?>
         </a>
       </div>
+    </div>
+  </section>
+
+  <!--Instructors Section -->
+  <?php 
+    $instructors_title = get_field('instructors_title');
+    $instructors_blurb = get_field('instructors_blurb');
+  ?>
+  <section class="instructors">
+    <div class="container section">
+      <h2 class="text-center"><?php echo $instructors_title; ?></h2>
+      <p class="text-center"><?php echo $instructors_blurb; ?></p>
+      
+      <?php wp_gym_instructors_list(4); ?>
     </div>
   </section>
 
