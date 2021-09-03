@@ -579,3 +579,58 @@ p.class-info {
 #map {
   height: 300px;
 }
+
+/** front-page **/
+.areas-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.areas-list .area-item {
+  flex: 0 0 50%;
+  position: relative;
+  display: flex;
+  justify-content: center; /* centers the text */
+  align-items: center; /* centers the text */
+  overflow: hidden;
+}
+
+.areas-list .area-item::after {
+  /* adds gradient to area-item */
+  content: "";
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.areas-list .area-item p {
+  position: absolute;
+  margin: auto;
+  color: var(--white);
+  z-index: 1;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.areas-list .area-item img {
+  height: 350px;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .areas-list .area-item {
+    flex: 0 0 25%;
+  }
+
+  .areas-list .area-item p {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .areas-list .area-item:hover p {
+    opacity: 1;
+  }
+}
