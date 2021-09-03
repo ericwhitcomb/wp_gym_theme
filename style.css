@@ -202,8 +202,11 @@ h6 {
 
 /** front header **/
 body.home .site-header {
-  height: 100vh;
-  min-height: 65rem; /** 650px **/
+  height: auto;
+  min-height: 40rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 body.home .tagline {
@@ -212,6 +215,11 @@ body.home .tagline {
 }
 
 @media (min-width: 768px) {
+  body.home .site-header {
+    height: 100vh;
+    min-height: 65rem; /** 650px **/
+  }
+
   body.home .header-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

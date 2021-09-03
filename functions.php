@@ -139,8 +139,6 @@ function wp_gym_hero_image() {
                           rgba(0, 0, 0, 0.75)
                         ), 
                         url($image_url);
-      background-repeat: no-repeat;
-      background-size: cover;
     }
   ";
 
