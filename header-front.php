@@ -27,5 +27,16 @@
           wp_nav_menu($args);
         ?>
     </div><!--.navigation-bar-->
+
+    <div class="tagline text-center">
+      <?php 
+        $hero_tagline = get_field('hero_tagline');
+        $hero_content = get_field('hero_content');
+      ?>
+
+      <h1><?php echo $hero_tagline; ?></h1>
+      <p><?php echo $hero_content; ?></p>
+    </div>
+
   </div><!--.container-->
 </header>

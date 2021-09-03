@@ -139,6 +139,7 @@ h6 {
   .navigation-bar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -196,6 +197,39 @@ h6 {
 
   .slicknav_menu {
     display: none;
+  }
+}
+
+/** front header **/
+body.home .site-header {
+  height: 100vh;
+  min-height: 65rem; /** 650px **/
+}
+
+body.home .tagline {
+  color: var(--white);
+  margin-top: 10rem;
+}
+
+@media (min-width: 768px) {
+  body.home .header-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  body.home .navigation-bar {
+    grid-column: 1 / 5;
+  }
+
+  body.home .tagline {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    margin-top: 0;
+  }
+
+  body.home .tagline p {
+    font-size: 2rem;
   }
 }
 
