@@ -51,6 +51,16 @@ function wp_gym_theme_scripts() {
     );
   }
 
+  // bxSlider CSS
+  if (is_front_page()) {
+    wp_enqueue_style(
+      'bxslider_css',
+      'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css',
+      array(),
+      '4.2.12'
+    );
+  }
+
   // Main Stylesheet
   wp_enqueue_style(
     'theme_style',
@@ -78,6 +88,17 @@ function wp_gym_theme_scripts() {
       get_template_directory_uri() . "/js/lightbox.min.js",
       array('jquery'),
       '2.11.3',
+      True // loads script in the footer
+    );
+  }
+
+  // bxSlider JS
+  if (is_front_page()) {
+    wp_enqueue_script(
+      'bxslider_js',
+      "https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js",
+      array('jquery'),
+      '4.2.12',
       True // loads script in the footer
     );
   }
