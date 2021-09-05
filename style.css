@@ -624,6 +624,7 @@ p.class-info {
 }
 
 /** front-page **/
+/** front-page: areas section **/
 .areas-list {
   display: flex;
   flex-wrap: wrap;
@@ -678,10 +679,12 @@ p.class-info {
   }
 }
 
+/** front-page: classes section **/
 .classes {
   background-color: var(--lightGray);
 }
 
+/** front-page: instructors section **/
 .instructors-list li {
   margin: 2rem 0;
   border-bottom: 1px solid var(--lightGray);
@@ -740,5 +743,87 @@ p.class-info {
 
   .instructor-item .content h3 {
     color: var(--primary);
+  }
+}
+
+/** front-page: testimonials section **/
+.testimonials {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(img/testimonial-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 12rem 0;
+}
+
+.testimonials .bx-wrapper {
+  /* override bxslider wrapper */
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.testimonials .bx-wrapper .bx-pager.bx-default-pager a,
+.testimonials .bx-wrapper .bx-pager.bx-default-pager a:hover {
+  /* override bxslider pager */
+  background: var(--white);
+}
+
+.testimonials .bx-wrapper .bx-pager.bx-default-pager a.active {
+  /* override bxslider pager */
+  background: var(--primary);
+}
+
+.testimonials h2 {
+  color: var(--white);
+}
+
+.testimonials .container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.testimonials .testimonial-item {
+  color: var(--white);
+}
+
+.testimonials .testimonial-item blockquote {
+  position: relative;
+  padding-left: 12rem;
+}
+
+.testimonials .testimonial-item blockquote::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 9rem;
+  background-image: url(img/quote.svg);
+  background-repeat: no-repeat;
+}
+
+.testimonials .testimonial-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials .testimonial-footer img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.testimonials .testimonial-footer p {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .testimonials .testimonial-footer {
+    justify-content: flex-end;
   }
 }
