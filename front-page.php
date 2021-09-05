@@ -58,7 +58,7 @@
     </div>
   </section>
 
-  <!--Instructors Section -->
+  <!-- Instructors Section -->
   <?php 
     $instructors_title = get_field('instructors_title');
     $instructors_blurb = get_field('instructors_blurb');
@@ -69,6 +69,18 @@
       <p class="text-center"><?php echo $instructors_blurb; ?></p>
       
       <?php wp_gym_instructors_list(4); ?>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <?php
+    $testimonials_title = get_field('testimonials_title');
+  ?>
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="text-center"><?php echo $testimonials_title; ?></h2>
+
+      <?php wp_gym_testimonials_list(3); ?>
     </div>
   </section>
 

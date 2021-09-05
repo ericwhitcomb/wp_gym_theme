@@ -69,3 +69,34 @@ function wp_gym_instructors_list($number_of_instructors = -1) { ?>
     <?php endwhile; wp_reset_postdata(); ?>
   </ul>
 <?php } ?>
+
+<?php
+// testimonials list query
+function wp_gym_testimonials_list($number_of_testimonials = -1) { ?>
+  <ul class="testimonials-list">
+    <?php 
+      $args = array(
+        'post_type' => 'wp_gym_testimonials',
+        'posts_per_page' => $number_of_testimonials,
+        'order' => 'ASC'
+      );
+
+      // Use WP_Query and append the results into $instructors
+      $testimonials = new WP_Query($args);
+      while($testimonials->have_posts()): $testimonials->the_post();
+    ?>
+
+      <li class="testimonial-item text-center">
+
+        <blockquote>
+          <?php the_content(); ?>
+        </blockquote>
+        
+        <footer class="testimonial-footer">
+          <?php the_post_thumbnail('thumbnail'); ?>
+          <p><?php the_title(); ?></p>
+        </footer>
+      </li>
+    <?php endwhile; wp_reset_postdata(); ?>
+  </ul>
+<?php } ?>
