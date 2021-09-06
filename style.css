@@ -198,6 +198,7 @@ h6 {
   .navigation-bar.fixed-top {
     position: fixed;
     width: 100%;
+    top: 0;
     left: 0;
     background-color: var(--darkGray);
     z-index: 1000;
