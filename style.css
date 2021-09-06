@@ -184,6 +184,24 @@ h6 {
     justify-content: space-between;
     align-items: center;
   }
+
+  body.ft {
+  }
+
+  .navigation-bar.fixed-top {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--darkGray);
+    z-index: 1000;
+    padding: 1rem 5rem;
+    transition: all 0.3s ease;
+  }
+
+  .navigation-bar.fixed-top img {
+    width: 12rem;
+  }
 }
 
 .main-menu {
@@ -312,6 +330,10 @@ body.home .tagline {
     display: flex;
   }
 
+  .footer-menu .current_page_item {
+    border-bottom: 2px solid var(--primary);
+  }
+
   .footer-menu .menu li {
     margin-right: 2rem;
   }
@@ -324,6 +346,7 @@ body.home .tagline {
     font-family: var(--mainFont);
     font-size: 2rem;
     color: var(--black);
+    padding: 0.5rem 1rem;
   }
 
   .copyright {
