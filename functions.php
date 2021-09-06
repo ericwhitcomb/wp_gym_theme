@@ -129,6 +129,8 @@ function wp_gym_theme_setup() {
   // Add feature image
   add_theme_support('post-thumbnails');
 
+  // SEO Titles
+  add_theme_support('title-tag');
 }
 
 add_action('after_setup_theme', 'wp_gym_theme_setup');
