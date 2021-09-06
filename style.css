@@ -178,6 +178,16 @@ h6 {
   justify-content: center;
 }
 
+.admin-bar .navigation-bar.fixed-top {
+  top: 46px;
+}
+
+@media (min-width: 783px) {
+  .admin-bar .navigation-bar.fixed-top {
+    top: 32px;
+  }
+}
+
 @media (min-width: 768px) {
   .navigation-bar {
     display: flex;
@@ -185,13 +195,9 @@ h6 {
     align-items: center;
   }
 
-  body.ft {
-  }
-
   .navigation-bar.fixed-top {
     position: fixed;
     width: 100%;
-    top: 0;
     left: 0;
     background-color: var(--darkGray);
     z-index: 1000;
