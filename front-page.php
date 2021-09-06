@@ -84,5 +84,17 @@
     </div>
   </section>
 
+  <!-- Blog Section -->
+  <?php
+    $blog_title = get_field('blog_title');
+    $blog_blurb = get_field('blog_blurb');
+  ?>
+  <section class="blog container section">
+    <h2 class="text-center"><?php echo $blog_title; ?></h2>
+    <p class="text-center"><?php echo $blog_blurb; ?></p>
+
+    <?php wp_gym_blog_entries_list(4); ?>
+  </section>
+
   <?php endwhile; ?>
 <?php get_footer(); ?>

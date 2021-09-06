@@ -13,7 +13,11 @@
 
   <p class="text-justify">Bio: <?php echo $author_bio; ?></p>
 
-  <?php get_template_part('template-parts/blog', 'loop') ?>
+  <ul class="blog-entries">
+    <?php while (have_posts()): the_post(); ?>
+      <?php get_template_part('template-parts/blog', 'item') ?>
+    <?php endwhile; ?>
+  </ul>
 </main>
 
 <?php get_footer(); ?>

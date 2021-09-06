@@ -1,5 +1,26 @@
 <?php
 // classes list query
+function wp_gym_blog_entries_list($number_of_entries = -1) { ?>
+  <ul class="blog-entries">
+    <?php
+      $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => $number_of_entries
+      );
+
+      // Use WP_Query and append the results into $classes
+      $posts = new WP_Query($args); 
+      while ($posts->have_posts()): $posts->the_post();
+    ?>
+
+      <?php get_template_part('template-parts/blog', 'item') ?>
+
+    <?php endwhile; wp_reset_postdata(); ?>
+  </ul>
+<?php } ?>
+
+<?php
+// classes list query
 function wp_gym_classes_list($number_of_classes = -1) { ?>
   <ul class="classes-list">
     <?php

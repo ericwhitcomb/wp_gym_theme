@@ -1,5 +1,4 @@
-<ul class="blog-entries">
-  <?php while (have_posts()): the_post(); ?>
+
     <li class="blog-entry card gradient">
       <?php the_post_thumbnail('medium_size'); ?>
 
@@ -39,5 +38,3 @@
         </p>
       </div>
     </li>
-  <?php endwhile; ?>
-</ul>
